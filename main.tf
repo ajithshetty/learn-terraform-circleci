@@ -1,15 +1,15 @@
 terraform {
+  required_version = ">= 0.13.0"
+
   required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "3.44.0"
-    }
+    aws = ">= 3.34"
   }
-  required_version = "> 0.14"
 }
 
+
+
 provider "aws" {
-  region = var.region
+  region = "ap-south-1"
 }
 
 resource "aws_s3_bucket" "b" {
